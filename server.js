@@ -56,6 +56,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects',
+    projects: ['SportsJunkies', 'RipeMetrics', 'Pick-A-Pet', 'DineTime']
+  })
+})
+
 app.get('/bad', (req, res) => {
   res.send(
     {
